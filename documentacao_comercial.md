@@ -19,7 +19,12 @@ Desenvolvemos uma plataforma inovadora que utiliza a inteligência de dados para
 *   **Simplificar a Jornada:** Facilitamos o acesso à informação e ao agendamento, tornando a experiência da paciente mais fluida e menos burocrática.
 *   **Apoiar a Decisão Médica:** Fornecemos aos médicos e equipes de saúde um panorama completo da jornada da paciente, com dados estruturados e insights que apoiam decisões clínicas mais rápidas e assertivas.
 
-![alt text](image-3.png)
+<div style="text-align: center;">
+![alt text](https://markdown.land/wp-content/uploads/2021/06/markdown-512px.png "Our logo")
+Um texto alternativo para a imagem
+</div>
+
+![alt text](image-4.png)
 <p style="text-align:center;">Jornada de Experiência do Cliente – PUSH NOTIFICATION – Mamografia.</p>
 
 ### Resultados que Fazem a Diferença: Impacto Real e Valor Gerado
