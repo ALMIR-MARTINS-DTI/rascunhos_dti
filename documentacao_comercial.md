@@ -20,7 +20,7 @@ Desenvolvemos uma plataforma inovadora que utiliza a inteligência de dados para
 *   **Apoiar a Decisão Médica:** Fornecemos aos médicos e equipes de saúde um panorama completo da jornada da paciente, com dados estruturados e insights que apoiam decisões clínicas mais rápidas e assertivas.
 
 ![alt text](image-3.png)
-<p style="text-align:center;">Jornada de Experiência do Cliente – PUSH NOTIFICATION – Mamografia</p>
+<p style="text-align:center;">Jornada de Experiência do Cliente – PUSH NOTIFICATION – Mamografia.</p>
 
 ### Resultados que Fazem a Diferença: Impacto Real e Valor Gerado
 
