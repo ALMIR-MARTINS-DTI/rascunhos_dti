@@ -49,7 +49,7 @@ Este documento detalha o fluxo inicial do processo de monitoramento de linhas de
 
 ## Fluxo de Processo Detalhado (Onda 1)
 
-![alt text](image-2.png)
+![alt text](image-1.png)
 
 ### 1. Exames de Imagem (Entrada)
 O processo se inicia com a entrada de dados provenientes de exames de imagem mamários.
@@ -130,7 +130,7 @@ Este documento detalha as novas etapas do processo de monitoramento de linhas de
 
 ## Fluxo de Processo Detalhado Onda 2
 
-![alt text](image-3.png)
+![alt text](image.png)
 
 ### 1. Classificação BI-RADS 1, 2, 3 (Ponto de Partida)
 Após a extração e classificação dos BI-RADS dos laudos de mamografia (conforme detalhado na documentação inicial do projeto), o fluxo se ramifica para as seguintes ações, dependendo da necessidade de investigação adicional.
