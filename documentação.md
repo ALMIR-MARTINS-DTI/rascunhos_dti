@@ -306,3 +306,4 @@ O estadiamento resultará na classificação do câncer em um dos seguintes est�
 
 ## Fluxo com siglas
 
+![alt text](image-2.png)
