@@ -307,3 +307,71 @@ O estadiamento resultará na classificação do câncer em um dos seguintes est�
 ## Fluxo com siglas
 
 ![alt text](image-2.png)
+
+## Regras de Ativação - Produção V1 
+
+Durante a 1ª PI do ano de 2025, para produtização do case de Mama (MVP) foram acordadas com a equipe Médica, de Jornada do Paciente e Marketing as seguintes regras de negócio para ativação de pacientes:
+
+### Campos Necessários e seus valores para Marketing
+
+``` python
+# Variáveis de Produção em Rotina para Marketing 
+linha_cuidado_in = 'saude-preventiva-mamografia' 
+id_cliente_controls = [8578678, 10445201, 6823872, 6020563, 7559999]  
+
+file_push_notification = 'main.notifications.view_control' #main.notifications.control' 
+file_mamo = 'refined.saude_preventiva.fleury_laudos_mamografia' 
+file_mamo_birads = 'refined.saude_preventiva.fleury_laudos_mamografia_birads' 
+file_mamo_outras_siglas = 'refined.saude_preventiva.fleury_laudos_mamografia_ajustada' 
+
+siglas_exame_elegiveis = ['MAMOG', 'MAMOG3D', 'MAMOGDIG', 'MAMOPROT'] 
+siglas_exame_retorno_elegiveis = ['MAMOG', 'MAMOG3D', 'MAMOGDIG', 'MAMOPROT', 'RMMAMAS', 'USMAMAS', 'USMAMASD] 
+siglas_totais_mama_elegiveis = ['ANATPATP', 'BIOMAMUS', 'BIOMAMUSCORE', 'BIOMAMUSPAAF', 'BRCA1', 'BRCA1E2', 'BRCA1E2SEQSOLO', 'BRCA1FAM', 'BRCA1MLPA', 'BRCA2', 'BRCA2FAM', 'BRCA2MLPA', 'BRCASOMATICO', 'CINTMAMA', 'CTPUNC', 'FISHHER', 'IH-NEO', 'MAMCLIPE', 'MAMOTOMIA', 'MAMOTOMUS', 'MAMOTORM', 'PAINELMAMA', 'RMMAMASPROTE', 'USMAMASRECONV'] 
+
+age_min = 40 
+age_max = <76 
+
+consentimento_basename = 'onetrust' 
+consentimentos_cliente = ['e-mail', 'sms', 'whatsapp'] 
+
+birads_elegiveis_e_meses_posteriores_para_retorno = { 
+    '12 meses': [1,2] 
+    '6 meses': [3] 
+} 
+
+canal_contato_in = 'mkt-relacionamento-paciente' 
+nome_empresa_list = ['FLEURY', 'Felippe Mattoso', 'Labs amais', 'IR', 'DIAGMAX', 'amais - SP', 'amais - BA'] 
+dth_previsao_retorno_range = ['2024-11-01', '2025-02-28'] 
+```
+
+### Campos Necessários e seus valores par APP-PUSH 
+
+``` python
+# Variáveis de Produção em Rotina para APP-Push 
+linha_cuidado_in = 'saude-preventiva-mamografia' 
+id_cliente_controls = [8578678, 10445201, 6823872, 6020563, 7559999]  
+
+file_push_notification = 'main.notifications.view_control' #main.notifications.control' 
+file_mamo = 'refined.saude_preventiva.fleury_laudos_mamografia' 
+file_mamo_birads = 'refined.saude_preventiva.fleury_laudos_mamografia_birads' 
+file_mamo_outras_siglas = 'refined.saude_preventiva.fleury_laudos_mamografia_ajustada' 
+
+siglas_exame_elegiveis = ['MAMOG', 'MAMOG3D', 'MAMOGDIG', 'MAMOPROT'] 
+siglas_exame_retorno_elegiveis = ['MAMOG', 'MAMOG3D', 'MAMOGDIG', 'MAMOPROT', 'RMMAMAS', 'USMAMAS', 'USMAMASD'] 
+siglas_totais_mama_elegiveis = ['ANATPATP', 'BIOMAMUS', 'BIOMAMUSCORE', 'BIOMAMUSPAAF', 'BRCA1', 'BRCA1E2', 'BRCA1E2SEQSOLO', 'BRCA1FAM', 'BRCA1MLPA', 'BRCA2', 'BRCA2FAM', 'BRCA2MLPA', 'BRCASOMATICO', 'CINTMAMA', 'CTPUNC', 'FISHHER', 'IH-NEO', 'MAMCLIPE', 'MAMOTOMIA', 'MAMOTOMUS', 'MAMOTORM', 'PAINELMAMA', 'RMMAMASPROTE', 'USMAMASRECONV'] 
+
+age_min = 40 
+age_max = 75 #<76 
+
+consentimento_basename = 'onetrust' 
+consentimentos_cliente = ['e-mail', 'sms', 'whatsapp'] 
+
+birads_elegiveis_e_meses_posteriores_para_retorno = { 
+    '12 meses': [1,2] 
+    '6 meses': [3] 
+} 
+
+canal_contato_in = 'app-push-notification' 
+nome_empresa_list = ['FLEURY'] 
+dth_previsao_retorno_range = ['2025-01-02', '2025-02-28'] 
+```
