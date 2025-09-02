@@ -20,7 +20,8 @@ Desenvolvemos uma plataforma inovadora que utiliza a inteligência de dados para
 *   **Apoiar a Decisão Médica:** Fornecemos aos médicos e equipes de saúde um panorama completo da jornada da paciente, com dados estruturados e insights que apoiam decisões clínicas mais rápidas e assertivas.
 
 <div style="text-align: center;">
-![alt text](https://markdown.land/wp-content/uploads/2021/06/markdown-512px.png "Our logo")
+
+![alt text](https://markdown.land/wp-content/uploads/2021/11/Markdown-center-2048x1152.png)
 Um texto alternativo para a imagem
 </div>
 
