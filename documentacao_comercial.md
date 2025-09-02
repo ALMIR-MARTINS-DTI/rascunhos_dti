@@ -19,14 +19,7 @@ Desenvolvemos uma plataforma inovadora que utiliza a inteligência de dados para
 *   **Simplificar a Jornada:** Facilitamos o acesso à informação e ao agendamento, tornando a experiência da paciente mais fluida e menos burocrática.
 *   **Apoiar a Decisão Médica:** Fornecemos aos médicos e equipes de saúde um panorama completo da jornada da paciente, com dados estruturados e insights que apoiam decisões clínicas mais rápidas e assertivas.
 
-<div style="text-align: center;">
-
-![alt text](https://markdown.land/wp-content/uploads/2021/11/Markdown-center-2048x1152.png)
-Um texto alternativo para a imagem
-</div>
-
 ![alt text](image-4.png)
-<p style="text-align:center;">Jornada de Experiência do Cliente – PUSH NOTIFICATION – Mamografia.</p>
 
 ### Resultados que Fazem a Diferença: Impacto Real e Valor Gerado
 
@@ -37,11 +30,17 @@ Este projeto não é apenas uma promessa; ele já entrega resultados tangíveis 
 *   **44,92% das pacientes com recomendação de retorno em 6 meses não retornaram.**
 *   **44,29% das pacientes com recomendação de retorno em 12 meses não retornaram.**
 
+![alt text](image-5.png)
+
 *   **Potencial de Retenção e Receita:** Ao engajar proativamente as pacientes, geramos um impacto financeiro positivo e sustentável.
 *   **Apenas com a marca Fleury, a retenção de 25% das pacientes em atraso em 2023 poderia gerar um faturamento médio de R$ 2,2 Milhões por ano.**
 *   **Considerando todas as marcas do Grupo Fleury (Fleury, Felippe Mattoso, Labs a+ , IR, DIAGMAX, Serdil, Novamed), o potencial de receita anual com a recuperação de pacientes em atraso pode chegar a impressionantes R$ 87,4 Milhões.**
 
 *   **Experiência do Paciente Aprimorada:** A jornada de notificação via aplicativo é um exemplo de como tornamos o cuidado mais acessível e conveniente, lembrando a paciente de forma gentil e direcionando-a para o agendamento.
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
 
 ### Nosso Compromisso com o Futuro da Saúde
 
