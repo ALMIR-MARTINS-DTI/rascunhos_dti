@@ -42,6 +42,10 @@ Este projeto não é apenas uma promessa; ele já entrega resultados tangíveis 
 
 ![alt text](image-7.png)
 
+### Entregas do Projeto
+
+![alt text](image-8.png)
+
 ### Nosso Compromisso com o Futuro da Saúde
 
 O projeto "Monitoramento de Linhas de Cuidado - Case Mama" é um testemunho do compromisso do Grupo Fleury com a inovação e a excelência em saúde. Ao alavancar o poder dos dados e da inteligência artificial, estamos construindo um futuro onde o cuidado preventivo é mais inteligente, acessível e, acima de tudo, mais eficaz na proteção da vida.
