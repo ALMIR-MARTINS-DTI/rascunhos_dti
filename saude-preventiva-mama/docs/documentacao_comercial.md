@@ -1,5 +1,7 @@
 # Monitoramento de Linhas de Cuidado - Case Mama: Inovação que Salva Vidas e Gera Valor
 
+![alt text](image-9.png)
+
 ## Transformando a Saúde da Mulher com Inteligência e Cuidado
 
 O câncer de mama é uma das maiores preocupações de saúde global, e a detecção precoce é a chave para o sucesso do tratamento e a preservação da vida. No Grupo Fleury, acreditamos que a tecnologia e a inovação podem revolucionar a forma como cuidamos de nossas pacientes. É com essa visão que apresentamos o projeto **"Monitoramento de Linhas de Cuidado - Case Mama"**, uma iniciativa pioneira que une inteligência artificial, dados e um cuidado humanizado para garantir que nenhuma mulher perca a oportunidade de um diagnóstico e tratamento em tempo hábil.
