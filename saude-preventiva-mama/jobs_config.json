@@ -1,0 +1,177 @@
+[
+  {
+    "name": "dp-saude-preventiva-mama",
+    "job_clusters": [
+      {
+        "job_cluster_key": "cluster_mama_fleury",
+        "new_cluster": {
+          "spark_version": "13.3.x-scala2.12",
+          "policy_id": "0006A6B122107909",
+          "node_type_id": "m6i.xlarge",
+          "num_workers": 2,
+          "aws_attributes": {
+            "availability": "SPOT",
+            "first_on_demand": 1,
+            "spot_bid_price_percent": 100,
+            "ebs_volume_type": "GENERAL_PURPOSE_SSD",
+            "ebs_volume_size": 70,
+            "ebs_volume_count": 1
+          }
+        }
+      },
+      {
+        "job_cluster_key": "cluster_mama_pardini",
+        "new_cluster": {
+          "spark_version": "13.3.x-scala2.12",
+          "policy_id": "0006A6B122107909",
+          "node_type_id": "m6i.xlarge",
+          "num_workers": 2,
+          "aws_attributes": {
+            "availability": "SPOT",
+            "first_on_demand": 1,
+            "spot_bid_price_percent": 100,
+            "ebs_volume_type": "GENERAL_PURPOSE_SSD",
+            "ebs_volume_size": 70,
+            "ebs_volume_count": 1
+          }
+        }  
+      }
+    ],
+    "email_notifications": {
+      "on_start":   ["gisele.ferreir@grupopardini.com.br", "lucas.oliveira1@grupofleury.com.br", "gleice.ssouza@grupofleury.com.br", "dti.almir@grupofleury.com.br"],
+      "on_success": ["gisele.ferreir@grupopardini.com.br", "lucas.oliveira1@grupofleury.com.br", "gleice.ssouza@grupofleury.com.br", "dti.almir@grupofleury.com.br"],
+      "on_failure": ["gisele.ferreir@grupopardini.com.br", "lucas.oliveira1@grupofleury.com.br", "gleice.ssouza@grupofleury.com.br", "dti.almir@grupofleury.com.br"]
+    },
+    "job_permissions": [
+      {
+        "group_name": "data-science-business-team",
+        "permission_level": "CAN_MANAGE"
+      }
+    ],
+    "tasks": [      
+      {
+        "task_key": "1_fleury_mama_birads",       
+        "job_cluster_key": "cluster_mama_fleury",
+        "notebook_task": {
+          "notebook_path": "/Live/dp-saude-preventiva-mama/1_fleury_mama_birads",
+          "base_parameters": {           
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-mama",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg" 
+          }
+        },
+        "libraries": [          
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "mlflow-skinny==3.3.2"}},
+          {"pypi": {"package": "databricks-feature-engineering"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      },
+      {
+        "task_key": "2_fleury_mama_biopsia",
+        "depends_on": [
+          {
+            "task_key": "1_fleury_mama_birads"
+          }
+        ],
+        "job_cluster_key": "cluster_mama_fleury",
+        "notebook_task": {
+          "notebook_path": "/Live/dp-saude-preventiva-torax/2_fleury_mama_biopsia",
+          "base_parameters": {            
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-mama",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg"
+          }
+        },
+        "libraries": [
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "mlflow-skinny==3.3.2"}},
+          {"pypi": {"package": "databricks-feature-engineering"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      },
+      {
+        "task_key": "A",
+        "depends_on": [
+          {
+            "task_key": "2_fleury_mama_biopsia"
+          }
+        ],
+        "job_cluster_key": "cluster_mama_fleury",
+        "notebook_task": {
+          "notebook_path": "",
+          "base_parameters": {            
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-mama",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg"
+          }
+        },
+        "libraries": [          
+          {"pypi": {"package": "python-Levenshtein"}},        
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      },
+      {
+        "task_key": "B",
+        "depends_on": [
+          {
+            "task_key": "A"
+          }
+        ],
+        "job_cluster_key": "cluster_mama_fleury",
+        "notebook_task": {
+          "notebook_path": "",
+          "base_parameters": {            
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-mama",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg"
+          }
+        },
+        "libraries": [
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      },           
+      {
+        "task_key": "1_pardini_mama_birads",       
+        "job_cluster_key": "cluster_mama_pardini",
+        "notebook_task": {
+          "notebook_path": "/Live/dp-saude-preventiva-torax/1_pardini_mama_birads",
+          "base_parameters": {            
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-torax",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg"
+          }
+        },
+        "libraries": [
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "mlflow-skinny==3.3.2"}},
+          {"pypi": {"package": "databricks-feature-engineering"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      },
+      {
+        "task_key": "C",
+        "depends_on": [
+          {
+            "task_key": "1_pardini_mama_birads"
+          }
+        ],
+        "job_cluster_key": "cluster_mama_pardini",
+        "notebook_task": {
+          "notebook_path": "",
+          "base_parameters": {            
+            "PROJECT_ROOT": "/Workspace/Live/dp-saude-preventiva-torax",
+            "WEBHOOK_DS_AI_BUSINESS_STG": "stg"
+          }
+        },
+        "libraries": [
+          {"pypi": {"package": "mlflow==3.3.2"}},
+          {"pypi": {"package": "mlflow-skinny==3.3.2"}},
+          {"pypi": {"package": "databricks-feature-engineering"}},
+          {"pypi": {"package": "octoops"}}
+        ]
+      }      
+    ],
+    "schedule": {
+      "quartz_cron_expression": "0 40 10 * * ?",
+      "timezone_id": "America/Sao_Paulo"
+    }
+  }
+]
